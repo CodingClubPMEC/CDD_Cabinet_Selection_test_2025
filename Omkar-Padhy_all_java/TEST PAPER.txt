@@ -1,0 +1,309 @@
+CDD Cabinet Selection Test
+
+NAME: Omkar Padhy
+BRANCH: CSE
+
+OOPS QUESTION
+
+Problem:
+Design a simple system using object-oriented principles where we have a base class Person and a derived class Student.
+•	The Person class should have:
+o	name (String)
+o	age (int)
+o	A method displayDetails() that prints the name and age.
+•	The Student class should inherit from Person and add:
+o	rollNumber (int)
+o	course (String)
+o	Override the displayDetails() method to print all four attributes.
+Requirements:
+1.	Use proper constructors, encapsulation (private fields and getters/setters), and method overriding.
+2.	In the main function, create one Student object and call the displayDetails() method.
+Language: Java / Python / C++ (Student’s choice)
+✅ Sample Output:
+Name: Ananya  
+Age: 20  
+Roll Number: 101  
+Course: B.Tech CSE
+
+JAVA
+
+// Write your code below
+class Person {
+    // TODO: private fields for name, age
+
+    // TODO: Constructor
+
+    // TODO: Getters and Setters
+
+    public void displayDetails() {
+        // TODO: Print name and age
+    }
+}
+
+class Student extends Person {
+    // TODO: private fields for rollNumber, course
+
+    // TODO: Constructor (call super constructor for name & age)
+
+    // TODO: Getters and Setters
+
+    @Override
+    public void displayDetails() {
+        // TODO: Print name, age, rollNumber, and course
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // TODO: Create Student object and call displayDetails()
+    }
+}
+
+
+PYTHON
+
+# Write your code below
+class Person:
+    # TODO: Constructor for name, age
+    # TODO: Getters and setters
+
+    def displayDetails(self):
+        # TODO: Print name and age
+
+class Student(Person):
+    # TODO: Constructor for name, age, rollNumber, course
+    # TODO: Getters and setters
+
+    def displayDetails(self):
+        # TODO: Print all attributes
+
+if __name__ == "__main__":
+    # TODO: Create Student object and call displayDetails()
+
+
+CPP
+
+#include <iostream>
+using namespace std;
+
+class Person {
+    // TODO: private fields for name, age
+public:
+    // TODO: Constructor
+    // TODO: Getters and Setters
+    virtual void displayDetails() {
+        // TODO: Print name and age
+    }
+};
+
+class Student : public Person {
+    // TODO: private fields for rollNumber, course
+public:
+    // TODO: Constructor (call base class constructor)
+    // TODO: Getters and Setters
+    void displayDetails() override {
+        // TODO: Print name, age, rollNumber, and course
+    }
+};
+
+int main() {
+    // TODO: Create Student object and call displayDetails()
+    return 0;
+}
+
+
+
+DSA QUESTIONS
+
+1. Find the Child Who Has the Ball After K Seconds
+You are given two positive integers n and k. There are n children numbered from 0 to n - 1 standing in a queue in order from left to right.
+Initially, child 0 holds a ball and the direction of passing the ball is towards the right direction. After each second, the child holding the ball passes it to the child next to them. Once the ball reaches either end of the line, i.e. child 0 or child n - 1, the direction of passing is reversed.
+Return the number of the child who receives the ball after k seconds.
+ 
+Example 1:
+Input: n = 3, k = 5
+Output: 1
+Explanation:
+Time elapsed	Children
+0	[0, 1, 2]
+1	[0, 1, 2]
+2	[0, 1, 2]
+3	[0, 1, 2]
+4	[0, 1, 2]
+5	[0, 1, 2]
+Example 2:
+Input: n = 5, k = 6
+Output: 2
+Explanation:
+Time elapsed	Children
+0	[0, 1, 2, 3, 4]
+1	[0, 1, 2, 3, 4]
+2	[0, 1, 2, 3, 4]
+3	[0, 1, 2, 3, 4]
+4	[0, 1, 2, 3, 4]
+5	[0, 1, 2, 3, 4]
+6	[0, 1, 2, 3, 4]
+
+Constraints:
+•	2 <= n <= 50
+•	1 <= k <= 50
+
+
+Solution:
+
+class Solution {
+    public int numberOfChild(int n, int k) {
+        
+    }
+}
+
+
+
+
+2. best Time to Buy and Sell Stock II
+You are given an integer array prices where prices[i] is the price of a given stock on the ith day.
+On each day, you may decide to buy and/or sell the stock. You can only hold at most one share of the stock at any time. However, you can buy it then immediately sell it on the same day.
+Find and return the maximum profit you can achieve.
+ 
+Example 1:
+Input: prices = [7,1,5,3,6,4]
+Output: 7
+Explanation: Buy on day 2 (price = 1) and sell on day 3 (price = 5), profit = 5-1 = 4.
+Then buy on day 4 (price = 3) and sell on day 5 (price = 6), profit = 6-3 = 3.
+Total profit is 4 + 3 = 7.
+Example 2:
+Input: prices = [1,2,3,4,5]
+Output: 4
+Explanation: Buy on day 1 (price = 1) and sell on day 5 (price = 5), profit = 5-1 = 4.
+Total profit is 4.
+Example 3:
+Input: prices = [7,6,4,3,1]
+Output: 0
+Explanation: There is no way to make a positive profit, so we never buy the stock to achieve the maximum profit of 0.
+ 
+Constraints:
+•	1 <= prices.length <= 3 * 104
+•	0 <= prices[i] <= 104
+
+Solution:
+
+class Solution {
+    public int maxProfit(int[] prices) {
+        
+    }
+}
+
+
+
+
+
+3. Find Smallest Letter Greater Than Target
+You are given an array of characters letters that is sorted in non-decreasing order, and a character target. There are at least two different characters in letters.
+Return the smallest character in letters that is lexicographically greater than target. If such a character does not exist, return the first character in letters.
+ 
+Example 1:
+Input: letters = ["c","f","j"], target = "a"
+Output: "c"
+Explanation: The smallest character that is lexicographically greater than 'a' in letters is 'c'.
+Example 2:
+Input: letters = ["c","f","j"], target = "c"
+Output: "f"
+Explanation: The smallest character that is lexicographically greater than 'c' in letters is 'f'.
+Example 3:
+Input: letters = ["x","x","y","y"], target = "z"
+Output: "x"
+Explanation: There are no characters in letters that is lexicographically greater than 'z' so we return letters[0].
+ 
+Constraints:
+•	2 <= letters.length <= 104
+•	letters[i] is a lowercase English letter.
+•	letters is sorted in non-decreasing order.
+•	letters contains at least two different characters.
+•	target is a lowercase English letter.
+
+Solution:
+
+class Solution {
+    public char nextGreatestLetter(char[] letters, char target) {
+        
+    }
+}
+
+
+
+4.Sqrt(x)
+Given a non-negative integer x, return the square root of x rounded down to the nearest integer. The returned integer should be non-negative as well.
+You must not use any built-in exponent function or operator.
+•	For example, do not use pow(x, 0.5) in c++ or x ** 0.5 in python.
+ 
+Example 1:
+Input: x = 4
+Output: 2
+Explanation: The square root of 4 is 2, so we return 2.
+Example 2:
+Input: x = 8
+Output: 2
+Explanation: The square root of 8 is 2.82842..., and since we round it down to the nearest integer, 2 is returned.
+ 
+Constraints:
+•	0 <= x <= 231 - 1
+
+
+Solution:
+
+class Solution {
+    public int mySqrt(int x) {
+        
+    }
+}
+
+
+
+
+
+5. Merge Sorted array
+
+You are given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two integers m and n, representing the number of elements in nums1 and nums2 respectively.
+
+Merge nums1 and nums2 into a single array sorted in non-decreasing order.
+
+The final sorted array should not be returned by the function, but instead be stored inside the array nums1. To accommodate this, nums1 has a length of m + n, where the first m elements denote the elements that should be merged, and the last n elements are set to 0 and should be ignored. nums2 has a length of n.
+
+
+Example 1:
+
+Input: nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3
+Output: [1,2,2,3,5,6]
+Explanation: The arrays we are merging are [1,2,3] and [2,5,6].
+The result of the merge is [1,2,2,3,5,6] with the underlined elements coming from nums1.
+Example 2:
+
+Input: nums1 = [1], m = 1, nums2 = [], n = 0
+Output: [1]
+Explanation: The arrays we are merging are [1] and [].
+The result of the merge is [1].
+Example 3:
+
+Input: nums1 = [0], m = 0, nums2 = [1], n = 1
+Output: [1]
+Explanation: The arrays we are merging are [] and [1].
+The result of the merge is [1].
+Note that because m = 0, there are no elements in nums1. The 0 is only there to ensure the merge result can fit in nums1.
+ 
+
+Constraints:
+
+nums1.length == m + n
+nums2.length == n
+0 <= m, n <= 200
+1 <= m + n <= 200
+-10^9 <= nums1[i], nums2[j] <= 10^9
+
+Solution:
+
+class Solution {
+    public void merge(int[] nums1, int m, int[] nums2, int n) {
+        
+    }
+}
+
