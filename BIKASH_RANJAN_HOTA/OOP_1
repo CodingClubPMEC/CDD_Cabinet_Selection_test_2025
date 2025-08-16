@@ -1,0 +1,26 @@
+class Person:
+    def __init__(self, name, age):
+        self._name = name
+        self._age = age
+
+    def displayDetails(self):
+        print(f"Name: {self._name}")
+        print(f"Age: {self._age}")
+
+class Student(Person):
+    def __init__(self, name, age, roll_number, course):
+        super().__init__(name, age)
+        self._roll_number = roll_number
+        self._course = course
+
+    
+    def displayDetails(self):
+        super().displayDetails()
+        print(f"Roll Number: {self._roll_number}")
+        print(f"Course: {self._course}")
+
+
+if __name__ == "__main__":
+   
+    student1 = Student("Ananya", 20, 101, "B.Tech CSE")
+    student1.displayDetails()
