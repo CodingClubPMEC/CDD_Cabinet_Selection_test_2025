@@ -1,0 +1,20 @@
+package main
+
+import "sort"
+
+func main() {
+	nums1 := []int{1, 2, 3, 0, 0, 0}
+	var temp []int
+	for i := range nums1 {
+		if i == 0 {
+			break
+		}
+		temp = append(temp, nums1[i])
+	}
+	nums2 := []int{2, 5, 6}
+	newArr := append(temp, nums2...)
+	sort.Ints(newArr)
+	for _, num := range newArr {
+		print(num)
+	}
+}

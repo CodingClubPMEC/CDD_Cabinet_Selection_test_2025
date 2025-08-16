@@ -1,0 +1,8 @@
+package main
+
+import "math"
+
+func main() {
+	var x float64 = 4
+	print(math.Sqrt(x))
+}
